@@ -1,0 +1,11 @@
+<h2>Parsed Questions:</h2>
+{% for q in questions %}
+    <div style="margin-bottom:20px;">
+        <strong>Q:</strong> {{ q.question }}<br>
+        <ul>
+            {% for key, value in q.choices.items() %}
+                <li>{{ key }}. {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
